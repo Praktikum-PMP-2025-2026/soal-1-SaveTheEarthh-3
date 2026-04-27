@@ -18,7 +18,7 @@ int *add (int * data, int elemen){
         CAP = CAP + 50;
         int *temp = (int *)realloc(data, CAP*sizeof(int)); 
         if (temp == NULL) {
-            printf("Memory expansion failed!\n");
+            printf("Gagal alokasi memori\n");
             CAP = CAP - 50; 
             return data;    
         }
@@ -58,19 +58,19 @@ int main(){
     jumlah --;
 
 
-    printf("%d\n", jumlah);
+    printf("COUNT %d SORTED ", jumlah);
     sort(data);
     for (int i = 0; i < jumlah; i++)
     {
         printf("%d ", data[i]);
     }
-    printf("\n");
+    printf("MEDIAN ");
     if (jumlah%2 == 0)
-    {
-        printf("%d", 0.5*(data[jumlah/2] + data[jumlah/2 + 1]));
+    {   
+        printf("%.2lf", 0.5*(data[jumlah/2] + data[jumlah/2 - 1]));
     }
     else{
-        printf("%d", data[jumlah/2]);
+        printf(" %d", data[jumlah/2]);
     }
     return 0;
 }
