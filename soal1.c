@@ -58,8 +58,8 @@ int main(){
     jumlah --;
 
 
-    printf("COUNT %d\n", jumlah);
-    sort(data); printf("SORTED ");
+    printf("%d\n", jumlah);
+    sort(data);
     for (int i = 0; i < jumlah; i++)
     {
         printf("%d ", data[i]);
@@ -67,10 +67,10 @@ int main(){
     printf("\n");
     if (jumlah%2 == 0)
     {
-        printf("MEDIAN %d", 0.5*(data[jumlah/2] + data[jumlah/2 + 1]));
+        printf("%d", 0.5*(data[jumlah/2] + data[jumlah/2 + 1]));
     }
     else{
-        printf("MEDIAN %d", data[jumlah/2]);
+        printf("%d", data[jumlah/2]);
     }
     return 0;
 }
