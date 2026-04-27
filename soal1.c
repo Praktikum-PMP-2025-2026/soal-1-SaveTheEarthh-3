@@ -70,7 +70,7 @@ int main(){
         printf("%.2lf", 0.5*(data[jumlah/2] + data[jumlah/2 - 1]));
     }
     else{
-        printf(" %d", data[jumlah/2]);
+        printf("%d", data[jumlah/2]);
     }
     return 0;
 }
